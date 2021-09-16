@@ -10,11 +10,11 @@ Rails.application.routes.draw do
 
   get '/contact', to: 'static_pages#contact'
 
-  get '/signup', to: 'user#new'
+  get '/signup', to: 'users#new'
 
-  get '/signup', to: 'users#create'
+  post '/signup', to: 'users#create'
 
-  resources :user
+  resources :users
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
